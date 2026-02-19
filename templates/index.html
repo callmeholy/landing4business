@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Процессика — Автоматизация и Управленческий учет</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav-container">
+            <div class="anim-left">ПРОЦЕССИКА</div>
+            <ul class="nav-menu">
+                <li class="anim-right"><a href="#services">Результаты</a></li>
+                <li class="anim-right"><a href="#process">Процесс</a></li>
+                <li class="anim-right"><a href="#contact" class="btn-small">Записаться на аудит</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="anim-bottom">Настроим управленческий учёт, чтобы вы видели <span>прибыль в цифрах</span>, а не «по ощущениям»</h1>
+                <p class="anim-bottom">Внедряем ERP, CRM и финансовые модели. Превращаем операционный хаос в прозрачную систему управления.</p>
+                <!-- <div class="hero-btns anim-bottom">
+                    <a href="#contact" class="btn-primary">Разобрать хаос в цифрах</a>
+                </div> -->
+                <button class="anim-bottom btn-primary">
+                    Разобрать хаос в цифрах
+                </button>
+            </div>
+        </section>
+
+        <section class="problems">
+            <h2 class="section-title">Если ваш бизнес сейчас выглядит так — системе нужна настройка</h2>
+            <div class="problems-new-grid">
+                <div class="p-card">
+                    <div class="p-icon">01</div>
+                    <p>Не понимаете реальную прибыль по направлениям</p>
+                </div>
+                <div class="p-card">
+                    <div class="p-icon">02</div>
+                    <p>Деньги в обороте есть, а дивидендов нет</p>
+                </div>
+                <div class="p-card">
+                    <div class="p-icon">03</div>
+                    <p>CRM формально есть, но управлять всё равно сложно</p>
+                </div>
+                <div class="p-card">
+                    <div class="p-icon">04</div>
+                    <p>Все важные отчёты до сих пор собираются вручную</p>
+                </div>
+                <div class="p-card">
+                    <div class="p-icon">05</div>
+                    <p>Отсутствует прозрачность по маржинальности сделок</p>
+                </div>
+                <div class="p-card">
+                    <div class="p-icon">06</div>
+                    <p>Сотрудники ведут дела в разрозненных Excel и Telegram</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="results">
+            <h2 class="section-title">Мы строим систему управления прибылью</h2>
+            <div class="results-grid">
+                <div class="res-card">
+                    <h3>+15–30%</h3>
+                    <p>К чистой прибыли за счёт выявления убыточных узлов</p>
+                </div>
+                <div class="res-card">
+                    <h3>−40%</h3>
+                    <p>Времени на подготовку рутинной отчетности</p>
+                </div>
+                <div class="res-card">
+                    <h3>100%</h3>
+                    <p>Контроль движения каждого рубля в компании</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process">
+            <h2 class="section-title">Как мы работаем</h2>
+            <div class="steps">
+                <div class="step"><span>01</span> <b>Диагностика</b></div>
+                <div class="step"><span>02</span> <b>Проектирование</b></div>
+                <div class="step"><span>03</span> <b>Внедрение</b></div>
+                <div class="step"><span>04</span> <b>Сопровождение</b></div>
+            </div>
+        </section>
+
+        <section id="contact" class="cta">
+            <div class="cta-content">
+                <h2>Хотите понять, где теряется прибыль?</h2>
+                <p>Запишитесь на диагностическую сессию и получите аудит системы за 60 минут</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Телефон / WhatsApp" required>
+                    <button type="submit" class="btn-primary">Записаться на сессию</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026. ПРОЦЕССИКА. Системы управления и автоматизация.</p>
+    </footer>
+
+    <script>
+        // Универсальный наблюдатель для появления секций без моргания
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Перестаем наблюдать после того, как секция появилась
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(s => {
+            s.classList.add('fade-in-section');
+            observer.observe(s);
+        });
+    </script>
+</body>
+</html>
