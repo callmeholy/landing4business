@@ -101,9 +101,9 @@
             <div class="cta-content">
                 <h2>Хотите понять, где теряется прибыль?</h2>
                 <p>Запишитесь на диагностическую сессию и получите аудит системы за 60 минут</p>
-                <form class="contact-form" action="/send_lead" method="POST">
+                <form class="contact-form" method="POST">
                     <input type="text" name="userName" placeholder="Ваше имя" required>
-                    <input type="tel" name="userPhone" placeholder="Телефон" required>
+                    <input type="tel" pattern="(\+7|8)[0-9]{10}" name="userPhone" placeholder="Телефон" required>
                     <button type="submit" class="btn-primary">Записаться на сессию</button>
                 </form>
             </div>
