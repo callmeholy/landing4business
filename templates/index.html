@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
+
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+     <div id="content" style="display: none;">
 
     <header class="header">
         <nav class="nav-container">
@@ -29,6 +37,10 @@
     </header>
 
     <main>
+        
+
+            <div id="content">
+            </div>
         <section class="hero">
             <div class="hero-content">
                 <h1 class="anim-bottom">Настроим управленческий учёт, чтобы вы видели <span>прибыль в цифрах</span>, а не «по ощущениям»</h1>
@@ -113,6 +125,7 @@
     <footer>
         <p>&copy; 2026. ПРОЦЕССИКА. Системы управления и автоматизация.</p>
     </footer>
+    </div>
 
     <script>
         // Универсальный наблюдатель для появления секций без моргания
@@ -172,5 +185,21 @@
             });
         });
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Ждем полной загрузки страницы
+    $(window).on('load', function() {
+        // Показываем контент
+        $('#content').show();
+        
+        // Добавляем класс loaded через небольшую задержку (чтоб прелоадер покрасивее ушел)
+        setTimeout(function() {
+            $('body').addClass('loaded');
+        }, 1500);
+    });
+});
+</script>
+    
 </body>
 </html>

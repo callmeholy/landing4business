@@ -53,7 +53,8 @@ header {
   margin: 0 auto;
 }
 
-.logo, .header div {
+.logo,
+.header div {
   font-weight: 800;
   font-size: clamp(1.2rem, 4vw, 1.8rem);
   letter-spacing: 2px;
@@ -392,10 +393,15 @@ footer {
   .nav-menu {
     gap: 20px;
   }
+
+  .res-card h3 {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
 }
 
 /* Мобильные устройства */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   /* Бургер-меню */
   .mobile-menu-btn {
     display: block;
@@ -452,11 +458,23 @@ footer {
 
   /* Заголовки */
   h1 {
-    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    font-size: clamp(2.2rem, 15vw, 3.5rem);
   }
 
   .section-title {
-    font-size: clamp(1.5rem, 6vw, 2rem);
+    font-size: clamp(2.2rem, 6vw, 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(1.2rem, 7vw, 2.5rem);
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding-top: 30px;
+    padding-bottom: 0;
   }
 }
 
@@ -540,4 +558,1291 @@ footer {
   .nav-menu {
     padding: 20px 0;
   }
+}
+
+/* 
+=========================================
+НОВАЯ СИСТЕМА БРЕЙКПОИНТОВ 
+=========================================
+*/
+
+/* 320px — Маленькие телефоны */
+@media (max-width: 320px) {
+  :root {
+    --section-padding: 30px 4%;
+    --gap: 12px;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 8vw, 1.8rem);
+    letter-spacing: -0.02em;
+  }
+
+  .hero {
+    min-height: 85vh;
+    padding-top: 70px;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .btn-primary {
+    padding: 12px 20px;
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .p-card {
+    padding: 20px 15px;
+  }
+
+  .p-card p {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .res-card h3 {
+    font-size: 2rem;
+  }
+
+  .res-card p {
+    font-size: 0.85rem;
+  }
+
+  .step b {
+    font-size: 0.9rem;
+  }
+
+  .cta {
+    padding: 40px 4%;
+    margin-bottom: 40px;
+  }
+
+  .cta h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta p {
+    font-size: 0.85rem;
+  }
+
+  .contact-form input,
+  .contact-form .btn-primary {
+    padding: 12px 15px;
+    font-size: 0.85rem;
+  }
+
+  footer {
+    padding: 30px 4%;
+    font-size: 0.65rem;
+  }
+}
+
+/* 360px — Средние телефоны */
+@media (min-width: 321px) and (max-width: 360px) {
+  :root {
+    --section-padding: 35px 4%;
+  }
+
+  html {
+    font-size: 14.5px;
+  }
+
+  h1 {
+    font-size: clamp(1.7rem, 7vw, 2rem);
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding-top: 75px;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    padding: 14px 25px;
+    font-size: 11.5px;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .problems-new-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .p-card {
+    padding: 22px 18px;
+  }
+
+  .res-card h3 {
+    font-size: 2.2rem;
+  }
+
+  .contact-form {
+    gap: 10px;
+  }
+}
+
+/* 768px — Планшеты (вертикально) */
+@media (min-width: 361px) and (max-width: 768px) {
+  :root {
+    --section-padding: 45px 5%;
+  }
+
+  html {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding-top: 90px;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    max-width: 80%;
+  }
+
+  .btn-primary {
+    padding: 16px 32px;
+  }
+
+  .problems-new-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .p-card {
+    padding: 25px 20px;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .res-card h3 {
+    font-size: clamp(2.2rem, 6vw, 3rem);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .step {
+    text-align: left;
+  }
+
+  .cta {
+    padding: 60px 6%;
+  }
+
+  .cta h2 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+  }
+
+  .cta p {
+    font-size: 1.1rem;
+  }
+
+  .contact-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact-form input {
+    flex: 1 1 200px;
+  }
+
+  .contact-form .btn-primary {
+    flex: 1 1 200px;
+  }
+}
+
+/* 1024px — Маленькие ноутбуки/планшеты горизонтально */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --section-padding: 60px 5%;
+    --container-width: min(1000px, 90%);
+  }
+
+  html {
+    font-size: 15.5px;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding-top: 100px;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 80%;
+  }
+
+  .problems-new-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .res-card h3 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .nav-menu {
+    gap: 25px;
+  }
+
+  .nav-menu a {
+    font-size: 12px;
+  }
+
+  /* На 1024 уже показываем десктопное меню, не бургер */
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    flex-direction: row;
+    border-left: none;
+  }
+
+  body {
+    overflow: auto !important;
+  }
+}
+
+/* 1400px — Десктопы */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  :root {
+    --section-padding: 70px 5%;
+    --container-width: min(1200px, 90%);
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  }
+
+  .hero p {
+    font-size: 1.4rem;
+    max-width: 70%;
+  }
+
+  .btn-primary {
+    padding: 18px 38px;
+    font-size: 13px;
+  }
+
+  .problems-new-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section-title {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+  }
+
+  .res-card h3 {
+    font-size: clamp(3rem, 6vw, 4rem);
+  }
+
+  /* Убираем мобильное меню на десктопе */
+  .mobile-menu-btn {
+    display: none !important;
+  }
+
+  .nav-menu {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    flex-direction: row;
+    border-left: none;
+    display: flex !important;
+  }
+
+  body {
+    overflow: auto !important;
+  }
+}
+
+/* 1920px — Большие десктопы */
+@media (min-width: 1401px) and (max-width: 1920px) {
+  :root {
+    --section-padding: 90px 5%;
+    --container-width: min(1400px, 95%);
+  }
+
+  html {
+    font-size: 17px;
+  }
+
+  body {
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: clamp(3.5rem, 5vw, 5rem);
+    max-width: 90%;
+  }
+
+  .hero p {
+    font-size: 1.6rem;
+    max-width: 65%;
+  }
+
+  .btn-primary {
+    padding: 22px 48px;
+    font-size: 14px;
+  }
+
+  .problems-new-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+
+  .p-card {
+    padding: 40px 30px;
+  }
+
+  .p-card p {
+    font-size: 1.3rem;
+  }
+
+  .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 70px;
+  }
+
+  .results-grid {
+    gap: 50px;
+  }
+
+  .res-card h3 {
+    font-size: 5rem;
+  }
+
+  .res-card p {
+    font-size: 1.2rem;
+  }
+
+  .steps {
+    gap: 60px;
+  }
+
+  .step span {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .step b {
+    font-size: 1.4rem;
+  }
+
+  .cta {
+    padding: 100px 8%;
+    border-radius: 12px;
+  }
+
+  .cta h2 {
+    font-size: 3.2rem;
+    margin-bottom: 25px;
+  }
+
+  .cta p {
+    font-size: 1.6rem;
+    margin-bottom: 60px;
+  }
+
+  .contact-form input {
+    padding: 22px 25px;
+    font-size: 1.1rem;
+  }
+
+  footer {
+    padding: 70px 5%;
+    font-size: 1rem;
+  }
+}
+
+/* 2560px+ — 4K и больше */
+@media (min-width: 1921px) {
+  :root {
+    --section-padding: 120px 5%;
+    --container-width: min(1800px, 95%);
+    --gap: 50px;
+  }
+
+  html {
+    font-size: 18px;
+  }
+
+  body {
+    line-height: 1.8;
+  }
+
+  h1 {
+    font-size: clamp(5rem, 6vw, 6rem);
+    max-width: 80%;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero p {
+    font-size: 2rem;
+    max-width: 60%;
+    margin-bottom: 70px;
+  }
+
+  .btn-primary {
+    padding: 25px 60px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+  }
+
+  .section-title {
+    font-size: 4.5rem;
+    margin-bottom: 90px;
+  }
+
+  .problems-new-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+
+  .p-card {
+    padding: 60px 45px;
+    border-width: 2px;
+  }
+
+  .p-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .p-icon {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+  .p-card p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .results-grid {
+    gap: 70px;
+  }
+
+  .res-card h3 {
+    font-size: 6rem;
+    margin-bottom: 25px;
+  }
+
+  .res-card p {
+    font-size: 1.5rem;
+  }
+
+  .steps {
+    gap: 80px;
+  }
+
+  .step span {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+  }
+
+  .step b {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .cta {
+    padding: 140px 10%;
+    border-radius: 16px;
+    border-width: 2px;
+  }
+
+  .cta h2 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
+
+  .cta p {
+    font-size: 2rem;
+    margin-bottom: 80px;
+  }
+
+  .contact-form {
+    gap: 25px;
+  }
+
+  .contact-form input {
+    padding: 25px 30px;
+    font-size: 1.3rem;
+    border-width: 2px;
+  }
+
+  .contact-form .btn-primary {
+    padding: 25px 50px;
+    font-size: 1.3rem;
+  }
+
+  footer {
+    padding: 90px 5%;
+    font-size: 1.2rem;
+    border-top-width: 2px;
+  }
+
+  /* Исправляем мобильное меню на таких огромных экранах */
+  .mobile-menu-btn {
+    display: none !important;
+  }
+
+  .nav-menu {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    flex-direction: row;
+    border-left: none;
+    display: flex !important;
+    gap: 50px;
+  }
+
+  .nav-menu a {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+
+  .btn-small {
+    padding: 12px 28px !important;
+    border-width: 2px;
+    font-size: 1.1rem !important;
+  }
+}
+
+/* 320px — Маленькие телефоны */
+@media (max-width: 320px) {
+  :root {
+    --section-padding: 25px 4%; /* Уменьшил с 30px до 25px */
+    --gap: 10px; /* Уменьшил gap */
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 25px 4%; /* Добавил конкретно для секций */
+  }
+
+  h1 {
+    font-size: clamp(1.4rem, 7vw, 1.6rem);
+    margin-bottom: 12px; /* Уменьшил отступ после заголовка */
+  }
+
+  .hero {
+    min-height: auto; /* Убрал min-height, теперь высота по контенту */
+    padding-top: 60px;
+    padding-bottom: 30px; /* Добавил отступ снизу */
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+    margin-bottom: 20px; /* Уменьшил отступ */
+  }
+
+  .btn-primary {
+    padding: 10px 18px;
+    font-size: 10px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px; /* Уменьшил */
+  }
+
+  .problems-new-grid {
+    gap: 10px; /* Уменьшил gap между карточками */
+  }
+
+  .p-card {
+    padding: 15px 12px; /* Уменьшил паддинги */
+  }
+
+  .p-card p {
+    font-size: 0.8rem;
+  }
+
+  .results-grid {
+    gap: 15px; /* Добавил gap для результатов */
+  }
+
+  .res-card {
+    padding: 15px 10px; /* Уменьшил паддинги */
+  }
+
+  .res-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px; /* Уменьшил */
+  }
+
+  .res-card p {
+    font-size: 0.75rem;
+  }
+
+  /* Steps секция - исправленная */
+  .process {
+    overflow: hidden; /* Чтобы ничего не вылезало */
+    width: 100%;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* По умолчанию 4 колонки */
+    gap: clamp(15px, 3vw, 30px);
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .step {
+    width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+  }
+
+  .step span {
+    display: block;
+    color: #888;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .step b {
+    display: block;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-break: break-word;
+  }
+
+  /* Мобилки - 2 колонки */
+  @media (max-width: 768px) {
+    .steps {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      text-align: left;
+      padding: 0 5px;
+    }
+  }
+
+  /* Совсем маленькие - 1 колонка */
+  @media (max-width: 480px) {
+    .steps {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #222;
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .cta {
+    padding: 25px 4%; /* Сильно уменьшил */
+    margin-bottom: 20px; /* Уменьшил */
+  }
+
+  .cta h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .cta p {
+    font-size: 0.75rem;
+    margin-bottom: 15px;
+  }
+
+  .contact-form {
+    gap: 8px; /* Уменьшил */
+  }
+
+  .contact-form input {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
+
+  .contact-form .btn-primary {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
+
+  footer {
+    padding: 20px 4%; /* Уменьшил */
+    font-size: 0.6rem;
+  }
+}
+
+/* 360px — Средние телефоны */
+@media (min-width: 321px) and (max-width: 360px) {
+  :root {
+    --section-padding: 30px 4%; /* Уменьшил */
+  }
+
+  section {
+    padding: 30px 4%;
+  }
+
+  h1 {
+    font-size: clamp(1.6rem, 6vw, 1.9rem);
+    margin-bottom: 15px;
+  }
+
+  .hero {
+    min-height: 55vh;
+    padding-top: 70px;
+    padding-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .p-card {
+    padding: 18px 15px;
+  }
+
+  .res-card h3 {
+    font-size: 2rem;
+  }
+
+  .cta {
+    padding: 30px 4%;
+    margin-bottom: 30px;
+  }
+}
+
+/* 480px — Добавим промежуточный для маленьких телефонов побольше */
+@media (min-width: 361px) and (max-width: 480px) {
+  :root {
+    --section-padding: 35px 5%;
+  }
+
+  section {
+    padding: 35px 5%;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .hero p {
+    margin-bottom: 25px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .problems-new-grid {
+    gap: 15px;
+  }
+
+  .p-card {
+    padding: 20px 18px;
+  }
+
+  .results-grid {
+    gap: 20px;
+  }
+
+  .res-card {
+    padding: 20px 15px;
+  }
+
+  .cta {
+    padding: 40px 5%;
+  }
+}
+
+/* 768px — Планшеты (вертикально) */
+@media (min-width: 481px) and (max-width: 768px) {
+  :root {
+    --section-padding: 45px 5%;
+  }
+
+  .hero {
+    min-height: auto; /* Убрал фиксированную высоту */
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+
+  .hero p {
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .problems-new-grid {
+    gap: 20px;
+  }
+
+  .p-card {
+    padding: 25px 20px;
+  }
+
+  .results-grid {
+    gap: 25px;
+  }
+
+  .cta {
+    padding: 50px 6%;
+  }
+}
+
+.res-card h3 {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+.res-card p,
+h3 {
+  text-align: center;
+}
+
+.steps {
+  max-width: 80%;
+}
+
+/* Как мы работаем - вся хуйня на флексах */
+.process {
+  width: 100%;
+  overflow: hidden;
+}
+
+.process .section-title {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.step {
+  flex: 1 1 200px; /* Базовый размер 200px, может расти и сжиматься */
+  min-width: 150px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.step span {
+  display: block;
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.step b {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+/* Планшеты */
+@media (max-width: 768px) {
+  .steps {
+    gap: 15px;
+  }
+
+  .step {
+    flex: 1 1 180px;
+  }
+
+  .step b {
+    font-size: 14px;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 480px) {
+  .steps {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .step {
+    width: 100%;
+    flex: none;
+    text-align: center;
+    border-bottom: 1px solid #222;
+    padding-bottom: 15px;
+  }
+
+  .step:last-child {
+    border-bottom: none;
+  }
+
+  .step b {
+    font-size: 18px;
+  }
+}
+
+/* Очень маленькие */
+@media (max-width: 320px) {
+  .step b {
+    font-size: 16px;
+  }
+}
+
+.results {
+  width: 100%;
+  padding: var(--section-padding) 5%;
+  background: var(--bg);
+  box-sizing: border-box;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Results секция на гридах */
+.results {
+  width: 100%;
+  padding: var(--section-padding) 5%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.results .section-title {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.res-card {
+  text-align: center;
+  padding: 40px 25px;
+  border-bottom: 1px solid var(--border);
+  transition: 0.3s;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.res-card:hover {
+  border-color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+}
+
+.res-card h3 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.1;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.res-card p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: #aaa;
+  line-height: 1.5;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* Ноутбуки */
+@media (max-width: 1200px) {
+  .results-grid {
+    gap: 25px;
+  }
+
+  .res-card {
+    padding: 35px 20px;
+  }
+}
+
+/* Планшеты - 2 колонки с центрированием последнего */
+@media (max-width: 900px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    justify-content: center;
+  }
+
+  /* Центрируем последний элемент */
+  .res-card:last-child {
+    grid-column: span 2; /* Растягиваем на 2 колонки */
+    justify-self: center; /* Центрируем по горизонтали */
+    max-width: 400px; /* Ограничиваем ширину */
+    width: 100%;
+  }
+
+  .res-card {
+    padding: 30px 20px;
+  }
+
+  .res-card h3 {
+    font-size: 3rem;
+  }
+}
+
+/* Мобилки - 1 колонка */
+@media (max-width: 600px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* Убираем особое поведение для последнего */
+  .res-card:last-child {
+    grid-column: auto;
+    justify-self: auto;
+    max-width: 100%;
+  }
+
+  .res-card {
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .res-card h3 {
+    font-size: 3rem;
+    white-space: nowrap;
+  }
+
+  .res-card p {
+    font-size: 1rem;
+    max-width: 250px;
+  }
+}
+
+/* Маленькие телефоны */
+@media (max-width: 380px) {
+  .res-card {
+    padding: 25px 15px;
+  }
+
+  .res-card h3 {
+    font-size: 2.5rem;
+  }
+
+  .res-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/** preloader
+
+/* Прелоадер */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff; /* Поменял на белый под твой сайт */
+  animation: spin 1.7s linear infinite;
+  z-index: 1001;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #888;
+  animation: spin-reverse 0.6s linear infinite;
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #444;
+  animation: spin 1s linear infinite;
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: var(--bg); /* Используем цвет фона из твоего сайта */
+  z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+/* Анимации */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Когда страница загрузилась */
+.loaded #loader-wrapper .loader-section.section-left {
+  transform: translateX(-100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  transform: translateX(100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all 0.3s 1s ease-out;
+}
+
+.loaded #content {
+  display: block !important;
+}
+
+#content {
+  display: none; /* Скрыт пока не загрузится */
+}
+
+.anim-bottom {
+  margin-top: 20px;
 }
